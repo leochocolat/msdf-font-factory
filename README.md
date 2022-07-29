@@ -8,7 +8,7 @@ Using [msdf-bmfont-xml](https://github.com/soimy/msdf-bmfont-xml)
 
 ## Usage
 
-You can just download the file located in the output folders of any font you want.
+You can just download the files located in the output folders of any font you want.
 
 To generate a new font just duplicate an existing font folder, rename it with the name you want, add the .ttf file, check the config file and then run :
 
@@ -38,4 +38,4 @@ npm start -- --name your-font-name
 
 ## Note
 
-MSDF Fonts are typically used to render text in WebGL. Here how you can use it with Three.js [github.com/Jam3/three-bmfont-text](https://github.com/Jam3/three-bmfont-text).
+MSDF Fonts are typically used to render text in WebGL. Here how you can use them with Three.js [github.com/Jam3/three-bmfont-text](https://github.com/Jam3/three-bmfont-text).
