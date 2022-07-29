@@ -3,8 +3,6 @@ const fs = require('fs');
 const yargs = require('yargs');
 const readline = require('readline');
 
-const fonts = require('./fonts/index.js');
-
 const { name } = yargs
     .usage('Usage: --name <name>')
     .option('n', { alias: 'name', describe: 'Font name', type: 'string', demandOption: false })
@@ -22,15 +20,17 @@ if (!name) {
 }
 
 function start(name) {
+    const fontConfig = require(`./fonts/${name}/index.js`);
+
     interface.close();
 
     console.log(`\nGenerating font ${name}...`);
 
     try {
-        generateBMFont(fonts[name].font, fonts[name].options, (error, textures, font) => {
+        generateBMFont(fontConfig.font, fontConfig.options, (error, textures, font) => {
             if (error) throw error;
     
-            const { outputPath, filename } = fonts[name].options;
+            const { outputPath, filename } = fontConfig.options;
     
             textures.forEach((texture) => {
                 fs.writeFile(`${outputPath}/${filename}.png`, texture.texture, (err) => {

@@ -10,7 +10,7 @@ Using [msdf-bmfont-xml](https://github.com/soimy/msdf-bmfont-xml)
 
 You can just download the file located in the output folders of any font you want.
 
-To generate a new font just duplicated an existing font folder. Don't forget to add it to the config file index.js, then run :
+To generate a new font just duplicate an existing font folder, rename it with the name you want, add the .ttf file, check the config file and then run :
 
 ```bash
 node index.js
